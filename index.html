@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bella Liu is a culture-centered storyteller exploring AI, media, global communication, inclusive education, and human-centered innovation.">
+  <meta name="description" content="Bella Liu is a culture-centered storyteller exploring AI, media, global communication, inclusive education, responsible technology, and human-centered innovation.">
   <title>刘纾冰 Bella Liu · Portfolio</title>
   <style>
     :root {
@@ -424,6 +424,150 @@
       background: #1d2630;
     }
 
+    .report-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(22px, 4vw, 38px);
+      background:
+        linear-gradient(145deg, rgba(229, 236, 243, 0.96), rgba(190, 210, 221, 0.92)),
+        #dfe8ee;
+    }
+
+    .report-ui {
+      width: min(100%, 430px);
+      padding: 18px;
+      border: 1px solid rgba(16, 24, 32, 0.12);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 24px 70px rgba(16, 24, 32, 0.18);
+      backdrop-filter: blur(18px);
+    }
+
+    .report-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      color: #263442;
+      font-size: 0.82rem;
+      font-weight: 820;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #5c7f8f;
+      box-shadow: 0 0 0 5px rgba(92, 127, 143, 0.16);
+    }
+
+    .chat-bubble {
+      max-width: 88%;
+      margin-bottom: 10px;
+      padding: 11px 13px;
+      border-radius: 16px;
+      color: #30404f;
+      background: #eef3f7;
+      font-size: 0.9rem;
+      line-height: 1.42;
+    }
+
+    .chat-bubble.user {
+      margin-left: auto;
+      color: #fff;
+      background: #263442;
+    }
+
+    .reflection-form {
+      display: grid;
+      gap: 9px;
+      margin-top: 14px;
+    }
+
+    .reflection-input {
+      width: 100%;
+      min-height: 76px;
+      resize: vertical;
+      padding: 12px;
+      border: 1px solid rgba(16, 24, 32, 0.12);
+      border-radius: 16px;
+      color: #1b2935;
+      background: rgba(255, 255, 255, 0.78);
+      font: inherit;
+      font-size: 0.86rem;
+      line-height: 1.42;
+    }
+
+    .reflection-input:focus,
+    .reflection-button:focus-visible {
+      outline: 3px solid rgba(92, 127, 143, 0.45);
+      outline-offset: 2px;
+    }
+
+    .reflection-button {
+      min-height: 38px;
+      border: 0;
+      border-radius: 999px;
+      color: #fff;
+      background: #263442;
+      font: inherit;
+      font-size: 0.84rem;
+      font-weight: 820;
+      cursor: pointer;
+    }
+
+    .report-card {
+      margin-top: 14px;
+      padding: 16px;
+      border: 1px solid rgba(16, 24, 32, 0.1);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .report-title {
+      margin: 0 0 10px;
+      color: #101820;
+      font-size: 1rem;
+      font-weight: 860;
+      letter-spacing: -0.02em;
+    }
+
+    .report-lede {
+      margin: 0 0 12px;
+      color: #556070;
+      font-size: 0.88rem;
+      line-height: 1.46;
+    }
+
+    .report-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .report-chip {
+      padding: 6px 9px;
+      border: 1px solid rgba(64, 98, 122, 0.24);
+      border-radius: 999px;
+      color: #253a48;
+      background: #eaf1f5;
+      font-size: 0.76rem;
+      font-weight: 760;
+    }
+
+    .ethics-note {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      border-left: 3px solid #8fb3c2;
+      border-radius: 14px;
+      color: rgba(246, 248, 251, 0.82);
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
     .timeline {
       display: grid;
       gap: 0;
@@ -703,7 +847,7 @@
       <div class="container">
         <div class="section-heading">
           <h2><span class="lang-zh">精选项目</span><span class="lang-en">Selected Work</span></h2>
-          <p><span class="lang-zh">文化、沟通和新兴技术交叉处的三个现场项目。</span><span class="lang-en">Field-based projects at the intersection of culture, communication, and emerging technology.</span></p>
+          <p><span class="lang-zh">文化、沟通和新兴技术交叉处的现场与原型项目。</span><span class="lang-en">Field-based and prototype projects at the intersection of culture, communication, and emerging technology.</span></p>
         </div>
 
         <div class="work-grid">
@@ -764,6 +908,50 @@
             </div>
             <div class="work-image">
               <img src="assets/pathfinder-internship.jpg" alt="Pathfinder internship sales practice in a Toread retail store">
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-copy">
+              <div>
+                <p class="eyebrow"><span class="lang-zh">AI 文化分析工具 · 消费趋势</span><span class="lang-en">AI culture analysis tool · Consumer trends</span></p>
+                <h3><span class="lang-zh">反思报告原型</span><span class="lang-en">Reflection Report Prototype</span></h3>
+                <p class="tension"><span class="lang-zh">AI 和数字平台如何帮助年轻人理解线上消费趋势背后的文化力量？</span><span class="lang-en">How do AI and digital platforms help young people understand the cultural forces behind online consumer trends?</span></p>
+                <p class="description"><span class="lang-zh">这个原型从 Labubu 等线上消费趋势出发，把“想买”转化为文化问题：身份、社群、稀缺性、博主影响、审美偏好和情绪安慰如何共同塑造欲望？</span><span class="lang-en">Starting from trends like Labubu, this prototype reframes a shopping impulse as a cultural question: what roles do identity, community, scarcity, influencer effect, aesthetic preference, and emotional comfort play in desire?</span></p>
+                <p class="ethics-note"><span class="lang-zh">这个工具不是为了刺激消费，而是帮助用户暂停、反思，并理解数字平台如何塑造欲望。</span><span class="lang-en">This tool is not designed to increase consumption. It helps users pause, reflect, and understand how digital platforms shape desire.</span></p>
+              </div>
+              <div class="meta-tags">
+                <span class="tag"><span class="lang-zh">AI 反思</span><span class="lang-en">AI reflection</span></span>
+                <span class="tag"><span class="lang-zh">数字平台</span><span class="lang-en">Digital platforms</span></span>
+                <span class="tag"><span class="lang-zh">负责任技术</span><span class="lang-en">Responsible technology</span></span>
+              </div>
+            </div>
+            <div class="work-image report-preview" aria-label="Reflection Report interface preview">
+              <div class="report-ui">
+                <div class="report-top">
+                  <span><span class="lang-zh">欲望反思助手</span><span class="lang-en">Desire Reflection Assistant</span></span>
+                  <span class="status-dot" aria-hidden="true"></span>
+                </div>
+                <div class="chat-bubble user"><span class="lang-zh">我为什么突然想买这个流行玩具？</span><span class="lang-en">Why do I suddenly want this trending toy?</span></div>
+                <div class="chat-bubble"><span class="lang-zh">先暂停一下。我们可以看看平台、社群和情绪如何影响这个选择。</span><span class="lang-en">Let's pause first. We can look at how platforms, community, and emotion shape this choice.</span></div>
+                <div class="reflection-form">
+                  <textarea class="reflection-input lang-zh" id="reflection-input-zh" rows="3">我在小红书上一直刷到 Labubu，大家都说很难买到，我也想拥有一个。</textarea>
+                  <textarea class="reflection-input lang-en" id="reflection-input-en" rows="3">I keep seeing Labubu online. Everyone says it is hard to get, and I feel like I want one too.</textarea>
+                  <button class="reflection-button" type="button" id="reflection-generate"><span class="lang-zh">生成反思报告</span><span class="lang-en">Generate reflection report</span></button>
+                </div>
+                <div class="report-card">
+                  <p class="report-title"><span class="lang-zh">反思报告</span><span class="lang-en">Reflection Report</span></p>
+                  <p class="report-lede"><span class="lang-zh">我的欲望可能来自：</span><span class="lang-en">My desire seems driven by:</span></p>
+                  <div class="report-chips" id="reflection-output" aria-label="Reflection report drivers">
+                    <span class="report-chip"><span class="lang-zh">情绪安慰</span><span class="lang-en">emotional comfort</span></span>
+                    <span class="report-chip"><span class="lang-zh">身份认同</span><span class="lang-en">identity</span></span>
+                    <span class="report-chip"><span class="lang-zh">社群归属</span><span class="lang-en">community</span></span>
+                    <span class="report-chip"><span class="lang-zh">稀缺性</span><span class="lang-en">scarcity</span></span>
+                    <span class="report-chip"><span class="lang-zh">博主影响</span><span class="lang-en">influencer effect</span></span>
+                    <span class="report-chip"><span class="lang-zh">审美偏好</span><span class="lang-en">aesthetic preference</span></span>
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
         </div>
@@ -906,6 +1094,83 @@
     languageButtons.forEach((button) => {
       button.addEventListener("click", () => setLanguage(button.dataset.langOption));
     });
+
+    const reflectionDrivers = [
+      {
+        key: "emotional",
+        zh: "情绪安慰",
+        en: "emotional comfort",
+        terms: ["comfort", "stress", "sad", "happy", "reward", "feel", "cute", "emotion", "情绪", "安慰", "治愈", "压力", "开心", "难过", "可爱"]
+      },
+      {
+        key: "identity",
+        zh: "身份认同",
+        en: "identity",
+        terms: ["identity", "style", "self", "personality", "aesthetic", "taste", "身份", "自我", "个性", "人设", "风格", "审美"]
+      },
+      {
+        key: "community",
+        zh: "社群归属",
+        en: "community",
+        terms: ["everyone", "friends", "group", "community", "trend", "popular", "大家", "朋友", "社群", "圈子", "流行", "潮流"]
+      },
+      {
+        key: "scarcity",
+        zh: "稀缺性",
+        en: "scarcity",
+        terms: ["rare", "limited", "hard to get", "sold out", "drop", "scarce", "难买", "限量", "缺货", "抢", "稀缺"]
+      },
+      {
+        key: "influencer",
+        zh: "博主影响",
+        en: "influencer effect",
+        terms: ["influencer", "creator", "tiktok", "youtube", "instagram", "online", "feed", "小红书", "抖音", "博主", "网红", "刷到", "平台"]
+      },
+      {
+        key: "aesthetic",
+        zh: "审美偏好",
+        en: "aesthetic preference",
+        terms: ["beautiful", "design", "color", "look", "toy", "labubu", "aesthetic", "好看", "设计", "颜色", "玩具", "拉布布", "审美"]
+      }
+    ];
+
+    const fallbackDriverKeys = ["emotional", "identity", "community"];
+    const reflectionOutput = document.querySelector("#reflection-output");
+    const reflectionButton = document.querySelector("#reflection-generate");
+
+    function renderReflectionReport(drivers) {
+      if (!reflectionOutput) return;
+      reflectionOutput.textContent = "";
+      drivers.forEach((driver) => {
+        const chip = document.createElement("span");
+        chip.className = "report-chip";
+        const zh = document.createElement("span");
+        zh.className = "lang-zh";
+        zh.textContent = driver.zh;
+        const en = document.createElement("span");
+        en.className = "lang-en";
+        en.textContent = driver.en;
+        chip.append(zh, en);
+        reflectionOutput.appendChild(chip);
+      });
+    }
+
+    function generateReflectionReport() {
+      const currentLanguage = document.body.dataset.lang === "zh" ? "zh" : "en";
+      const input = document.querySelector(`#reflection-input-${currentLanguage}`);
+      const text = (input?.value || "").toLowerCase();
+      const matchedDrivers = reflectionDrivers.filter((driver) =>
+        driver.terms.some((term) => text.includes(term.toLowerCase()))
+      );
+      const selectedKeys = new Set(matchedDrivers.map((driver) => driver.key));
+      fallbackDriverKeys.forEach((key) => {
+        if (selectedKeys.size < 3) selectedKeys.add(key);
+      });
+      const selectedDrivers = reflectionDrivers.filter((driver) => selectedKeys.has(driver.key));
+      renderReflectionReport(selectedDrivers);
+    }
+
+    reflectionButton?.addEventListener("click", generateReflectionReport);
 
     setLanguage(readSavedLanguage());
   </script>
