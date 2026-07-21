@@ -654,7 +654,7 @@
     }
   </style>
 </head>
-<body data-lang="zh">
+<body data-lang="en">
   <header class="navbar" aria-label="Main navigation">
     <a class="brand" href="#top" aria-label="Back to top">
       <span class="mark">BL</span>
@@ -668,8 +668,8 @@
       <a href="#contact"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a>
       <a class="resume-link" href="mailto:sophe0224@gmail.com"><span class="lang-zh">邮箱</span><span class="lang-en">Email</span></a>
       <div class="lang-toggle" aria-label="Language switcher">
-        <button type="button" data-lang-option="zh" aria-pressed="true">中</button>
-        <button type="button" data-lang-option="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang-option="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang-option="zh" aria-pressed="false">中</button>
       </div>
     </nav>
   </header>
@@ -870,9 +870,9 @@
     const languageButtons = document.querySelectorAll("[data-lang-option]");
     function readSavedLanguage() {
       try {
-        return localStorage.getItem("bella-site-language") || "zh";
+        return localStorage.getItem("bella-site-language") || "en";
       } catch {
-        return "zh";
+        return "en";
       }
     }
 
