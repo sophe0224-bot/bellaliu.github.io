@@ -1189,8 +1189,14 @@
   </footer>
   <script>
     const languageButtons = document.querySelectorAll("[data-lang-option]");
+    const languageDefaultVersion = "english-default-v2";
     function readSavedLanguage() {
       try {
+        if (localStorage.getItem("bella-site-language-version") !== languageDefaultVersion) {
+          localStorage.setItem("bella-site-language-version", languageDefaultVersion);
+          localStorage.setItem("bella-site-language", "en");
+          return "en";
+        }
         return localStorage.getItem("bella-site-language") || "en";
       } catch {
         return "en";
