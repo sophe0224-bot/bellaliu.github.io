@@ -568,6 +568,89 @@
       line-height: 1.5;
     }
 
+    .case-study-block {
+      display: grid;
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .case-study-lede {
+      margin: 0;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 760;
+    }
+
+    .case-facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .case-fact {
+      min-height: 132px;
+      padding: 15px;
+      border: 1px solid var(--line-dark);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .case-fact strong {
+      display: block;
+      margin-bottom: 7px;
+      color: #fff;
+      font-size: 0.78rem;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+    }
+
+    .case-fact span {
+      color: var(--muted-dark);
+      font-size: 0.88rem;
+      line-height: 1.48;
+    }
+
+    .project-role {
+      margin: 0;
+      color: rgba(246, 248, 251, 0.82);
+      font-size: 0.88rem;
+    }
+
+    .project-role strong {
+      color: #fff;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .project-link {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 14px;
+      border: 1px solid rgba(246, 248, 251, 0.28);
+      border-radius: 999px;
+      color: #101820;
+      background: #fff;
+      font-size: 0.86rem;
+      font-weight: 820;
+    }
+
+    .project-link.secondary {
+      color: #fff;
+      background: transparent;
+    }
+
+    .project-link:hover {
+      transform: translateY(-1px);
+    }
+
     .timeline {
       display: grid;
       gap: 0;
@@ -748,7 +831,8 @@
       }
 
       .proof-list,
-      .capabilities {
+      .capabilities,
+      .case-facts {
         grid-template-columns: 1fr;
       }
 
@@ -825,7 +909,7 @@
         <div>
           <p class="hero-kicker">刘纾冰 Bella Liu</p>
           <h1>Bella Liu</h1>
-          <p class="role"><span class="lang-zh">以文化为中心的故事讲述者，探索 AI、媒体和全球沟通。</span><span class="lang-en">Culture-centered storyteller exploring AI, media, and global communication.</span></p>
+          <p class="role"><span class="lang-zh">我把文化观察转化为面向年轻人、教育者和品牌的媒体研究与互动体验。</span><span class="lang-en">I turn cultural observations into media research and interactive experiences for young audiences, educators, and brands.</span></p>
           <p class="subheadline"><span class="lang-zh">我关注技术如何改变人们看见、学习和连接的方式。通过可可西里纪录片、斯里兰卡支教和户外科技品牌研究，我持续思考一个问题：新兴技术如何帮助人的故事变得更负责任、更包容、更容易被理解？</span><span class="lang-en">I am interested in how technology changes the way people see, learn, and connect across cultures. Through documentary fieldwork in Kekexili, teaching service in Sri Lanka, and brand research on outdoor technology, I study one question: how can emerging technologies help human stories become more ethical, inclusive, and understandable?</span></p>
           <ul class="proof-list" aria-label="Quick highlights">
             <li><strong><span class="lang-zh">文化与媒体</span><span class="lang-en">Culture + Media</span></strong><span><span class="lang-zh">纪录片、视觉叙事和公共记忆</span><span class="lang-en">documentary, visual storytelling, and public memory</span></span></li>
@@ -920,6 +1004,40 @@
                 <h3><span class="lang-zh">反思报告原型</span><span class="lang-en">Reflection Report Prototype</span></h3>
                 <p class="tension"><span class="lang-zh">AI 和数字平台如何帮助年轻人理解线上消费趋势背后的文化力量？</span><span class="lang-en">How do AI and digital platforms help young people understand the cultural forces behind online consumer trends?</span></p>
                 <p class="description"><span class="lang-zh">这个原型从 Labubu 等线上消费趋势出发，把“想买”转化为文化问题：身份、社群、稀缺性、博主影响、审美偏好和情绪安慰如何共同塑造欲望？</span><span class="lang-en">Starting from trends like Labubu, this prototype reframes a shopping impulse as a cultural question: what roles do identity, community, scarcity, influencer effect, aesthetic preference, and emotional comfort play in desire?</span></p>
+                <div class="case-study-block">
+                  <p class="case-study-lede"><span class="lang-zh">案例研究：从社交媒体欲望到理性选择</span><span class="lang-en">Case study: from social-media desire to reflective choice</span></p>
+                  <div class="case-facts">
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">问题</span><span class="lang-en">Problem</span></strong>
+                      <span><span class="lang-zh">当开箱视频、明星内容、朋友动态和限量提示同时出现时，年轻消费者很难区分真实喜好与平台推动的 FOMO。</span><span class="lang-en">When unboxings, celebrity content, friend activity, and limited-release cues appear together, young consumers struggle to separate genuine liking from platform-driven FOMO.</span></span>
+                    </div>
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">用户与利益相关者</span><span class="lang-en">Audience + Stakeholders</span></strong>
+                      <span><span class="lang-zh">主要用户是活跃于 TikTok、小红书和 Instagram 的年轻消费者与收藏者；教育者、家庭、品牌和平台也会受到影响。</span><span class="lang-en">The primary audience is young consumers and collectors on TikTok, Xiaohongshu, and Instagram; educators, families, brands, and platforms are also stakeholders.</span></span>
+                    </div>
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">研究洞察</span><span class="lang-en">Research Insight</span></strong>
+                      <span><span class="lang-zh">欲望通常不是由单一广告触发，而是沿着情绪价值、身份匹配、社群归属和稀缺感逐层增强。</span><span class="lang-en">Desire is rarely triggered by one advertisement; it grows through emotional value, identity fit, community belonging, and scarcity.</span></span>
+                    </div>
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">设计回应</span><span class="lang-en">Design Response</span></strong>
+                      <span><span class="lang-zh">我设计了一个双语 Chatbox 和七阶段互动流程，让用户提出问题、观察影响指标，并在购买前反思自己的动机。</span><span class="lang-en">I designed a bilingual chatbox and seven-stage interaction that lets users ask questions, observe influence signals, and reflect before buying.</span></span>
+                    </div>
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">商业与营销价值</span><span class="lang-en">Business + Marketing Value</span></strong>
+                      <span><span class="lang-zh">该原型可用于消费者洞察、负责任营销课堂、青年媒体素养工作坊和活动概念测试；差异点是解释转化，而不是刺激转化。</span><span class="lang-en">The prototype can support consumer insight, responsible-marketing classes, youth media-literacy workshops, and campaign concept testing. Its difference is explaining conversion—not maximizing it.</span></span>
+                    </div>
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">影响与下一步</span><span class="lang-en">Impact + Next Step</span></strong>
+                      <span><span class="lang-zh">预期帮助用户为冲动命名并做出更清晰的选择。下一步是进行 5–8 次用户测试，比较体验前后的购买意愿和媒体素养。</span><span class="lang-en">The intended impact is clearer, more reflective decision-making. Next, I will run 5–8 user tests and compare purchase intent and media literacy before and after the experience.</span></span>
+                    </div>
+                  </div>
+                  <p class="project-role"><strong><span class="lang-zh">我的职责：</span><span class="lang-en">My role:</span></strong> <span class="lang-zh">问题定义、资料研究、双语内容策略、互动设计、原型开发与视觉编辑。</span><span class="lang-en">problem framing, research synthesis, bilingual content strategy, interaction design, prototyping, and visual editing.</span></p>
+                  <div class="project-links">
+                    <a class="project-link" href="https://labubu-bella-case-study.supacademy-l-4443.chatgpt.site" target="_blank" rel="noreferrer"><span class="lang-zh">体验完整案例研究 ↗</span><span class="lang-en">Explore the full case study ↗</span></a>
+                    <a class="project-link secondary" href="https://github.com/sophe0224-bot/chatbox-labubu" target="_blank" rel="noreferrer"><span class="lang-zh">查看项目代码 ↗</span><span class="lang-en">View project source ↗</span></a>
+                  </div>
+                </div>
                 <p class="ethics-note"><span class="lang-zh">这个工具不是为了刺激消费，而是帮助用户暂停、反思，并理解数字平台如何塑造欲望。</span><span class="lang-en">This tool is not designed to increase consumption. It helps users pause, reflect, and understand how digital platforms shape desire.</span></p>
               </div>
               <div class="meta-tags">
