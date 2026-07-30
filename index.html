@@ -871,9 +871,26 @@
 
     .about-image {
       overflow: hidden;
+      position: relative;
       min-height: 420px;
       border-radius: var(--radius-lg);
       background: var(--surface);
+    }
+
+    .about-image-caption {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      max-width: min(72%, 340px);
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 18px;
+      color: #fff;
+      background: rgba(16, 24, 32, 0.62);
+      backdrop-filter: blur(14px);
+      font-size: 0.86rem;
+      line-height: 1.42;
+      font-weight: 720;
     }
 
     .about-copy {
@@ -883,7 +900,9 @@
       padding: clamp(28px, 5vw, 48px);
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      background: #fff;
+      background:
+        linear-gradient(135deg, rgba(236, 244, 248, 0.9), rgba(255, 255, 255, 0.72) 42%, #fff),
+        #fff;
     }
 
     .about-copy h2 {
@@ -897,6 +916,87 @@
       margin: 18px 0 0;
       color: var(--muted);
       font-size: 1.05rem;
+    }
+
+    .about-kicker {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 30px;
+      margin-bottom: 18px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.72);
+      font-size: 0.76rem;
+      font-weight: 840;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .about-signature {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: #243342;
+      font-size: 1.02rem;
+      line-height: 1.46;
+      font-weight: 760;
+    }
+
+    .about-signals {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .about-signal {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 10px;
+      align-items: start;
+      min-height: 76px;
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .signal-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--ink);
+      font-size: 0.72rem;
+      font-weight: 860;
+    }
+
+    .about-signal strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+      font-size: 0.92rem;
+      line-height: 1.18;
+    }
+
+    .about-signal span:last-child {
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.35;
+    }
+
+    .about-question {
+      margin-top: 22px;
+      padding: 16px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--accent);
+      font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      font-weight: 850;
     }
 
     .capabilities {
@@ -1027,6 +1127,10 @@
       }
 
       .consumer-board {
+        grid-template-columns: 1fr;
+      }
+
+      .about-signals {
         grid-template-columns: 1fr;
       }
 
@@ -1388,11 +1492,33 @@
       <div class="container about-grid">
         <div class="about-image">
           <img src="assets/srilanka-3.jpg" alt="Students showing artwork in Sri Lanka classroom">
+          <div class="about-image-caption"><span class="lang-zh">在课堂、田野和舞台之间，我寻找让复杂经验被看见的方法。</span><span class="lang-en">Between classrooms, fieldwork, and performance, I look for ways to make complex experiences visible.</span></div>
         </div>
         <div class="about-copy">
           <div>
+            <span class="about-kicker"><span class="lang-zh">节奏 · 观察 · 表达</span><span class="lang-en">Rhythm · Fieldwork · Expression</span></span>
             <h2><span class="lang-zh">关于 Bella</span><span class="lang-en">About Bella</span></h2>
-            <p><span class="lang-zh">我是刘纾冰 Bella，一个开朗的 ENTP。我从小学习琵琶，考到中国音乐学院琵琶六级，也喜欢跳 Jazz 和 K-pop。对我来说，创作、表演和研究都和“如何让别人理解”有关。</span><span class="lang-en">I am Bella Liu, an outgoing ENTP. I grew up learning pipa, earned Level 6 certification from the China Conservatory of Music grading system, and love Jazz and K-pop dance. For me, creation, performance, and research all connect to one question: how can people understand more clearly?</span></p>
+            <p><span class="lang-zh">我是刘纾冰 Bella，一个外向、好奇、行动很快的 ENTP。我喜欢把观察变成能被别人感受到的东西：一段影像、一个课堂活动、一个研究问题，或一个互动原型。</span><span class="lang-en">I am Bella Liu: outgoing, curious, and fast-moving. I like turning observation into something people can feel: a film scene, a classroom activity, a research question, or an interactive prototype.</span></p>
+            <p class="about-signature"><span class="lang-zh">琵琶训练让我重视结构，Jazz 和 K-pop 舞蹈让我相信表达要有能量；研究让我把这种能量落到清楚的问题里。</span><span class="lang-en">Pipa trained my sense of structure. Jazz and K-pop taught me energy and timing. Research helps me turn that energy into clear questions.</span></p>
+            <div class="about-signals" aria-label="Bella personal signals">
+              <div class="about-signal">
+                <span class="signal-mark">01</span>
+                <span><strong><span class="lang-zh">琵琶六级</span><span class="lang-en">Pipa Level 6</span></strong><span><span class="lang-zh">从节奏里学习耐心和结构。</span><span class="lang-en">Learning patience and structure through rhythm.</span></span></span>
+              </div>
+              <div class="about-signal">
+                <span class="signal-mark">02</span>
+                <span><strong><span class="lang-zh">Jazz / K-pop</span><span class="lang-en">Jazz / K-pop</span></strong><span><span class="lang-zh">用身体理解表达和舞台感。</span><span class="lang-en">Using movement to understand expression.</span></span></span>
+              </div>
+              <div class="about-signal">
+                <span class="signal-mark">03</span>
+                <span><strong><span class="lang-zh">现场观察</span><span class="lang-en">Field Observation</span></strong><span><span class="lang-zh">在真实场景里寻找问题。</span><span class="lang-en">Finding questions in real situations.</span></span></span>
+              </div>
+              <div class="about-signal">
+                <span class="signal-mark">04</span>
+                <span><strong><span class="lang-zh">清楚表达</span><span class="lang-en">Clear Expression</span></strong><span><span class="lang-zh">把复杂内容讲得更可感。</span><span class="lang-en">Making complex ideas easier to feel.</span></span></span>
+              </div>
+            </div>
+            <div class="about-question"><span class="lang-zh">我一直在问：怎样让一个故事被真正理解？</span><span class="lang-en">My recurring question: how can a story be truly understood?</span></div>
           </div>
         </div>
       </div>
