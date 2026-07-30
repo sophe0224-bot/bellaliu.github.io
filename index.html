@@ -612,6 +612,34 @@
       line-height: 1.48;
     }
 
+    .field-notes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .field-note {
+      min-height: 122px;
+      padding: 14px 0 0;
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .field-note strong {
+      display: block;
+      margin-bottom: 7px;
+      color: #fff;
+      font-size: 0.78rem;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .field-note span {
+      color: var(--muted-dark);
+      font-size: 0.88rem;
+      line-height: 1.48;
+    }
+
     .paper-callout {
       display: grid;
       gap: 12px;
@@ -862,6 +890,7 @@
 
       .proof-list,
       .capabilities,
+      .field-notes,
       .case-facts {
         grid-template-columns: 1fr;
       }
@@ -974,6 +1003,24 @@
                 <h3><span class="lang-zh">可可西里纪录片</span><span class="lang-en">Kekexili Documentary</span></h3>
                 <p class="tension"><span class="lang-zh">环境叙事、文化记忆和视觉技术。</span><span class="lang-en">Environmental storytelling, cultural memory, and visual technology.</span></p>
                 <p class="description"><span class="lang-zh">在可可西里，我用纪录片拍摄理解景观、劳动和生态保护如何成为公共记忆的一部分。这个项目让我意识到，媒体不只是记录现实的方式，也是一种塑造人们理解环境责任的技术。</span><span class="lang-en">In Kekexili, I used documentary filming to understand how landscape, labor, and ecological protection become part of public memory. This project helped me see media not only as a way to record reality, but as a technology for shaping how people understand environmental responsibility.</span></p>
+                <div class="field-notes">
+                  <div class="field-note">
+                    <strong><span class="lang-zh">拍摄对象</span><span class="lang-en">Subject</span></strong>
+                    <span><span class="lang-zh">保护站工作人员、巡护现场和高原景观之间的关系。</span><span class="lang-en">The relationship between conservation workers, patrol routines, and plateau landscapes.</span></span>
+                  </div>
+                  <div class="field-note">
+                    <strong><span class="lang-zh">现场方法</span><span class="lang-en">Field Method</span></strong>
+                    <span><span class="lang-zh">用观察、采访和移动镜头记录环境保护背后的日常劳动。</span><span class="lang-en">Used observation, interviews, and moving images to document the labor behind environmental protection.</span></span>
+                  </div>
+                  <div class="field-note">
+                    <strong><span class="lang-zh">核心问题</span><span class="lang-en">Core Question</span></strong>
+                    <span><span class="lang-zh">影像如何让遥远的生态责任变得具体、可感、可被记住？</span><span class="lang-en">How can images make distant ecological responsibility concrete, felt, and memorable?</span></span>
+                  </div>
+                  <div class="field-note">
+                    <strong><span class="lang-zh">项目收获</span><span class="lang-en">Takeaway</span></strong>
+                    <span><span class="lang-zh">纪录片不只是保存现场，也能帮助观众理解人与环境的互相依赖。</span><span class="lang-en">Documentary can preserve a place while helping audiences understand human dependence on the environment.</span></span>
+                  </div>
+                </div>
               </div>
               <div class="meta-tags">
                 <span class="tag"><span class="lang-zh">纪录片</span><span class="lang-en">Documentary</span></span>
