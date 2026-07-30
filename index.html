@@ -612,6 +612,36 @@
       line-height: 1.48;
     }
 
+    .paper-callout {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid rgba(246, 248, 251, 0.2);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      text-decoration: none;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .paper-callout:hover {
+      transform: translateY(-2px);
+      border-color: rgba(246, 248, 251, 0.36);
+      background: rgba(255, 255, 255, 0.11);
+    }
+
+    .paper-callout strong {
+      color: #fff;
+      font-size: 0.9rem;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+    }
+
+    .paper-callout span {
+      color: var(--muted-dark);
+      font-size: 0.92rem;
+    }
+
     .project-role {
       margin: 0;
       color: rgba(246, 248, 251, 0.82);
@@ -1004,6 +1034,10 @@
                 <h3><span class="lang-zh">反思报告原型</span><span class="lang-en">Reflection Report Prototype</span></h3>
                 <p class="tension"><span class="lang-zh">AI 和数字平台如何帮助年轻人理解线上消费趋势背后的文化力量？</span><span class="lang-en">How do AI and digital platforms help young people understand the cultural forces behind online consumer trends?</span></p>
                 <p class="description"><span class="lang-zh">这个原型从 Labubu 等线上消费趋势出发，把“想买”转化为文化问题：身份、社群、稀缺性、博主影响、审美偏好和情绪安慰如何共同塑造欲望？</span><span class="lang-en">Starting from trends like Labubu, this prototype reframes a shopping impulse as a cultural question: what roles do identity, community, scarcity, influencer effect, aesthetic preference, and emotional comfort play in desire?</span></p>
+                <a class="paper-callout" href="labubu-research-paper.html">
+                  <strong><span class="lang-zh">研究论文</span><span class="lang-en">Research Paper</span></strong>
+                  <span><span class="lang-zh">阅读《Why People Buy Labubu》：关于新奢侈、社交媒体和中国年轻消费者欲望的研究。</span><span class="lang-en">Read “Why People Buy Labubu,” a paper on New Luxury, social media, and youth consumer desire in modern China.</span></span>
+                </a>
                 <div class="case-study-block">
                   <p class="case-study-lede"><span class="lang-zh">案例研究：从社交媒体欲望到理性选择</span><span class="lang-en">Case study: from social-media desire to reflective choice</span></p>
                   <div class="case-facts">
@@ -1035,7 +1069,7 @@
                   <p class="project-role"><strong><span class="lang-zh">我的职责：</span><span class="lang-en">My role:</span></strong> <span class="lang-zh">问题定义、资料研究、双语内容策略、互动设计、原型开发与视觉编辑。</span><span class="lang-en">problem framing, research synthesis, bilingual content strategy, interaction design, prototyping, and visual editing.</span></p>
                   <div class="project-links">
                     <a class="project-link" href="https://labubu-bella-case-study.supacademy-l-4443.chatgpt.site" target="_blank" rel="noreferrer"><span class="lang-zh">体验完整案例研究 ↗</span><span class="lang-en">Explore the full case study ↗</span></a>
-                    <a class="project-link" href="assets/bella-liu-labubu-research-paper.docx" target="_blank" rel="noreferrer"><span class="lang-zh">阅读研究论文 ↗</span><span class="lang-en">Read the research paper ↗</span></a>
+                    <a class="project-link" href="labubu-research-paper.html"><span class="lang-zh">阅读研究论文 ↗</span><span class="lang-en">Read the research paper ↗</span></a>
                     <a class="project-link secondary" href="https://github.com/sophe0224-bot/chatbox-labubu" target="_blank" rel="noreferrer"><span class="lang-zh">查看项目代码 ↗</span><span class="lang-en">View project source ↗</span></a>
                   </div>
                 </div>
