@@ -122,8 +122,7 @@
 
     .nav-links a:focus-visible,
     .lang-toggle button:focus-visible,
-    .button:focus-visible,
-    .contact-link:focus-visible {
+    .button:focus-visible {
       outline: 3px solid var(--accent);
       outline-offset: 3px;
     }
@@ -1006,10 +1005,6 @@
     }
 
     .contact-card {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.52fr);
-      gap: 28px;
-      align-items: end;
       padding: clamp(28px, 5vw, 54px);
       border: 1px solid var(--line-dark);
       border-radius: var(--radius-lg);
@@ -1027,30 +1022,6 @@
       max-width: 610px;
       margin: 16px 0 0;
       color: var(--muted-dark);
-    }
-
-    .contact-links {
-      display: grid;
-      gap: 10px;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      min-height: 58px;
-      padding: 14px 16px;
-      border: 1px solid var(--line-dark);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      font-weight: 760;
-    }
-
-    .contact-link span:last-child {
-      overflow-wrap: anywhere;
-      text-align: right;
-      color: rgba(246, 248, 251, 0.76);
     }
 
     footer {
@@ -1073,8 +1044,7 @@
       .section-heading,
       .work-card,
       .work-card:nth-child(even),
-      .about-grid,
-      .contact-card {
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1476,24 +1446,6 @@
           <div>
             <h2><span class="lang-zh">联系我</span><span class="lang-en">Let's connect</span></h2>
             <p><span class="lang-zh">欢迎联系我聊纪录片、公益项目、品牌研究、音乐、舞蹈或合作。</span><span class="lang-en">Reach out to talk about documentary work, service projects, brand research, music, dance, or collaboration.</span></p>
-          </div>
-          <div class="contact-links">
-            <a class="contact-link" href="mailto:sophe0224@gmail.com">
-              <span>Email</span>
-              <span>sophe0224@gmail.com</span>
-            </a>
-            <a class="contact-link" href="assets/bella-liu-cv.pdf" target="_blank" rel="noreferrer">
-              <span><span class="lang-zh">简历</span><span class="lang-en">CV</span></span>
-              <span>Bella_Liu_CV.pdf</span>
-            </a>
-            <a class="contact-link" href="https://www.linkedin.com/in/bella-liu-814421280/" target="_blank" rel="noreferrer">
-              <span>LinkedIn</span>
-              <span>bella-liu-814421280</span>
-            </a>
-            <a class="contact-link" href="https://www.youtube.com/@B3llaS-w4z" target="_blank" rel="noreferrer">
-              <span>YouTube</span>
-              <span>@B3llaS-w4z</span>
-            </a>
           </div>
         </div>
       </div>
