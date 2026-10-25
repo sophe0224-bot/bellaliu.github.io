@@ -121,8 +121,7 @@
     }
 
     .nav-links a:focus-visible,
-    .lang-toggle button:focus-visible,
-    .button:focus-visible {
+    .lang-toggle button:focus-visible {
       outline: 3px solid var(--accent);
       outline-offset: 3px;
     }
@@ -181,10 +180,10 @@
     }
 
     .hero {
-      min-height: 100svh;
+      min-height: 82svh;
       display: grid;
       align-items: center;
-      padding: 128px 0 84px;
+      padding: 140px 0 90px;
       background:
         radial-gradient(circle at 75% 28%, rgba(64, 98, 122, 0.16), transparent 32%),
         var(--bg);
@@ -192,8 +191,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.74fr);
-      gap: clamp(36px, 6vw, 86px);
+      grid-template-columns: minmax(0, 1fr);
       align-items: center;
     }
 
@@ -208,10 +206,10 @@
 
     h1 {
       margin: 0;
-      max-width: 820px;
-      font-size: clamp(3.3rem, 8.2vw, 7.3rem);
-      line-height: 0.92;
-      letter-spacing: -0.075em;
+      max-width: 1000px;
+      font-size: clamp(3.2rem, 6.8vw, 6rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
       font-weight: 860;
     }
 
@@ -256,41 +254,6 @@
     .proof-list span {
       color: var(--muted);
       font-size: 0.9rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .button {
-      min-height: 46px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 11px 16px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #fff;
-      font-size: 0.92rem;
-      font-weight: 780;
-    }
-
-    .button.primary {
-      color: #fff;
-      background: var(--ink);
-      border-color: var(--ink);
-    }
-
-    .profile-frame {
-      overflow: hidden;
-      aspect-ratio: 4 / 5;
-      border: 1px solid rgba(16, 24, 32, 0.12);
-      border-radius: var(--radius-lg);
-      background: var(--surface);
-      box-shadow: var(--shadow);
     }
 
     .section {
@@ -414,6 +377,87 @@
       background: #1d2630;
     }
 
+    .work-video {
+      display: grid;
+      align-content: center;
+      background: #000;
+    }
+
+    .work-video iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+    }
+
+    .w8-ports {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .w8-port {
+      display: block;
+      padding: 16px 0;
+      border-top: 1px solid rgba(246, 248, 251, 0.42);
+      text-decoration: none;
+    }
+
+    .w8-port:focus-visible,
+    .labubu-preview:focus-visible {
+      outline: 3px solid #8fb3c2;
+      outline-offset: 4px;
+    }
+
+    .w8-port:hover strong {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .w8-port > span {
+      display: block;
+      color: #9eb8c4;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .w8-port strong {
+      display: block;
+      margin-top: 7px;
+      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.24;
+    }
+
+    .w8-port small {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted-dark);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .labubu-preview {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: clamp(20px, 4vw, 38px);
+      background: #e4edf1;
+    }
+
+    .labubu-preview img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: top;
+      border: 1px solid rgba(16, 24, 32, 0.14);
+      border-radius: 8px;
+      box-shadow: 0 16px 42px rgba(16, 24, 32, 0.13);
+    }
+
     .collage {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -421,258 +465,6 @@
       gap: 6px;
       padding: 6px;
       background: #1d2630;
-    }
-
-    .report-preview {
-      display: flex;
-      align-items: stretch;
-      justify-content: flex-start;
-      flex-direction: column;
-      gap: 16px;
-      padding: clamp(22px, 4vw, 38px);
-      background:
-        linear-gradient(145deg, rgba(229, 236, 243, 0.96), rgba(190, 210, 221, 0.92)),
-        #dfe8ee;
-    }
-
-    .consumer-board {
-      display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(160px, 0.72fr);
-      gap: 12px;
-      width: 100%;
-    }
-
-    .consumer-shot {
-      overflow: hidden;
-      position: relative;
-      min-height: 260px;
-      border: 1px solid rgba(16, 24, 32, 0.12);
-      border-radius: 22px;
-      background: #fff;
-      box-shadow: 0 18px 50px rgba(16, 24, 32, 0.14);
-    }
-
-    .consumer-shot img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-    }
-
-    .shot-label {
-      position: absolute;
-      left: 12px;
-      bottom: 12px;
-      display: inline-flex;
-      align-items: center;
-      min-height: 30px;
-      padding: 7px 10px;
-      border: 1px solid rgba(16, 24, 32, 0.1);
-      border-radius: 999px;
-      color: #263442;
-      background: rgba(255, 255, 255, 0.86);
-      font-size: 0.74rem;
-      font-weight: 820;
-    }
-
-    .signal-panel {
-      display: grid;
-      align-content: space-between;
-      gap: 12px;
-      padding: 16px;
-      border: 1px solid rgba(16, 24, 32, 0.12);
-      border-radius: 22px;
-      color: #263442;
-      background: rgba(255, 255, 255, 0.72);
-      box-shadow: 0 18px 50px rgba(16, 24, 32, 0.1);
-    }
-
-    .signal-kicker {
-      margin: 0;
-      color: #667481;
-      font-size: 0.72rem;
-      font-weight: 820;
-      text-transform: uppercase;
-      letter-spacing: 0;
-    }
-
-    .signal-title {
-      margin: 4px 0 0;
-      color: #101820;
-      font-size: 1.15rem;
-      line-height: 1.05;
-      font-weight: 860;
-    }
-
-    .signal-list {
-      display: grid;
-      gap: 9px;
-    }
-
-    .signal-row {
-      display: grid;
-      grid-template-columns: 28px 1fr auto;
-      gap: 8px;
-      align-items: center;
-      font-size: 0.78rem;
-      font-weight: 760;
-    }
-
-    .signal-icon {
-      display: grid;
-      place-items: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      color: #fff;
-      background: #263442;
-      font-size: 0.72rem;
-      font-weight: 860;
-    }
-
-    .signal-value {
-      color: #5c7f8f;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .mini-graph {
-      display: grid;
-      align-items: end;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 5px;
-      height: 54px;
-      padding-top: 6px;
-      border-top: 1px solid rgba(16, 24, 32, 0.1);
-    }
-
-    .mini-graph span {
-      display: block;
-      border-radius: 999px 999px 6px 6px;
-      background: linear-gradient(180deg, #5c7f8f, #263442);
-    }
-
-    .report-ui {
-      width: min(100%, 430px);
-      align-self: center;
-      padding: 18px;
-      border: 1px solid rgba(16, 24, 32, 0.12);
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.78);
-      box-shadow: 0 24px 70px rgba(16, 24, 32, 0.18);
-      backdrop-filter: blur(18px);
-    }
-
-    .report-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 14px;
-      color: #263442;
-      font-size: 0.82rem;
-      font-weight: 820;
-    }
-
-    .status-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #5c7f8f;
-      box-shadow: 0 0 0 5px rgba(92, 127, 143, 0.16);
-    }
-
-    .chat-bubble {
-      max-width: 88%;
-      margin-bottom: 10px;
-      padding: 11px 13px;
-      border-radius: 16px;
-      color: #30404f;
-      background: #eef3f7;
-      font-size: 0.9rem;
-      line-height: 1.42;
-    }
-
-    .chat-bubble.user {
-      margin-left: auto;
-      color: #fff;
-      background: #263442;
-    }
-
-    .reflection-form {
-      display: grid;
-      gap: 9px;
-      margin-top: 14px;
-    }
-
-    .reflection-input {
-      width: 100%;
-      min-height: 76px;
-      resize: vertical;
-      padding: 12px;
-      border: 1px solid rgba(16, 24, 32, 0.12);
-      border-radius: 16px;
-      color: #1b2935;
-      background: rgba(255, 255, 255, 0.78);
-      font: inherit;
-      font-size: 0.86rem;
-      line-height: 1.42;
-    }
-
-    .reflection-input:focus,
-    .reflection-button:focus-visible {
-      outline: 3px solid rgba(92, 127, 143, 0.45);
-      outline-offset: 2px;
-    }
-
-    .reflection-button {
-      min-height: 38px;
-      border: 0;
-      border-radius: 999px;
-      color: #fff;
-      background: #263442;
-      font: inherit;
-      font-size: 0.84rem;
-      font-weight: 820;
-      cursor: pointer;
-    }
-
-    .report-card {
-      margin-top: 14px;
-      padding: 16px;
-      border: 1px solid rgba(16, 24, 32, 0.1);
-      border-radius: 18px;
-      background: #fff;
-    }
-
-    .report-title {
-      margin: 0 0 10px;
-      color: #101820;
-      font-size: 1rem;
-      font-weight: 860;
-      letter-spacing: -0.02em;
-    }
-
-    .report-lede {
-      margin: 0 0 12px;
-      color: #556070;
-      font-size: 0.88rem;
-      line-height: 1.46;
-    }
-
-    .report-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .report-chip {
-      padding: 6px 9px;
-      border: 1px solid rgba(64, 98, 122, 0.24);
-      border-radius: 999px;
-      color: #253a48;
-      background: #eaf1f5;
-      font-size: 0.76rem;
-      font-weight: 760;
     }
 
     .ethics-note {
@@ -758,37 +550,6 @@
       line-height: 1.48;
     }
 
-    .paper-callout {
-      display: grid;
-      gap: 7px;
-      margin-top: 16px;
-      padding: 14px;
-      border: 1px solid rgba(246, 248, 251, 0.2);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.075);
-      text-decoration: none;
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-    }
-
-    .paper-callout:hover {
-      transform: translateY(-2px);
-      border-color: rgba(246, 248, 251, 0.36);
-      background: rgba(255, 255, 255, 0.11);
-    }
-
-    .paper-callout strong {
-      color: #fff;
-      font-size: 0.9rem;
-      letter-spacing: 0.045em;
-      text-transform: uppercase;
-    }
-
-    .paper-callout span {
-      color: var(--muted-dark);
-      font-size: 0.86rem;
-      line-height: 1.38;
-    }
-
     .project-role {
       margin: 0;
       color: rgba(246, 248, 251, 0.82);
@@ -797,35 +558,6 @@
 
     .project-role strong {
       color: #fff;
-    }
-
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .project-link {
-      min-height: 42px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 14px;
-      border: 1px solid rgba(246, 248, 251, 0.28);
-      border-radius: 999px;
-      color: #101820;
-      background: #fff;
-      font-size: 0.86rem;
-      font-weight: 820;
-    }
-
-    .project-link.secondary {
-      color: #fff;
-      background: transparent;
-    }
-
-    .project-link:hover {
-      transform: translateY(-1px);
     }
 
     .timeline {
@@ -987,17 +719,6 @@
       line-height: 1.35;
     }
 
-    .about-question {
-      margin-top: 22px;
-      padding: 16px 0 0;
-      border-top: 1px solid var(--line);
-      color: var(--accent);
-      font-size: clamp(1.25rem, 2.4vw, 1.75rem);
-      line-height: 1.15;
-      letter-spacing: -0.035em;
-      font-weight: 850;
-    }
-
     .contact {
       padding: clamp(72px, 9vw, 118px) 0;
       color: #fff;
@@ -1083,13 +804,11 @@
 
       .proof-list,
       .field-notes,
-      .case-facts {
+      .case-facts,
+      .w8-ports {
         grid-template-columns: 1fr;
       }
 
-      .profile-frame {
-        max-height: 560px;
-      }
     }
 
     @media (max-width: 680px) {
@@ -1126,6 +845,7 @@
 
       .hero {
         padding-top: 74px;
+        min-height: auto;
       }
 
       .timeline-item {
@@ -1154,8 +874,8 @@
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="#work"><span class="lang-zh">作品</span><span class="lang-en">Work</span></a>
       <a href="#experience"><span class="lang-zh">经历</span><span class="lang-en">Experience</span></a>
-      <a href="#about"><span class="lang-zh">关于</span><span class="lang-en">About</span></a>
       <a href="#contact"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a>
+      <a href="#about"><span class="lang-zh">关于</span><span class="lang-en">About</span></a>
       <a href="assets/bella-liu-cv.pdf" target="_blank" rel="noreferrer"><span class="lang-zh">简历</span><span class="lang-en">CV</span></a>
       <a class="resume-link" href="mailto:sophe0224@gmail.com"><span class="lang-zh">邮箱</span><span class="lang-en">Email</span></a>
       <div class="lang-toggle" aria-label="Language switcher">
@@ -1169,25 +889,15 @@
     <section class="hero" aria-label="Bella Liu introduction">
       <div class="container hero-grid">
         <div>
-          <p class="hero-kicker">刘纾冰 Bella Liu</p>
-          <h1>Bella Liu</h1>
+          <p class="hero-kicker">刘纾冰 · Bella Liu</p>
+          <h1><span class="lang-zh">我的一个反复追问：一个故事如何才能真正被理解？</span><span class="lang-en">My recurring question: how can a story be truly understood?</span></h1>
           <p class="role"><span class="lang-zh">我把文化观察转化为面向年轻人、教育者和品牌的媒体研究与互动体验。</span><span class="lang-en">I turn cultural observations into media research and interactive experiences for young audiences, educators, and brands.</span></p>
-          <p class="subheadline"><span class="lang-zh">我关注技术如何改变人们看见、学习和连接的方式。通过可可西里纪录片、斯里兰卡支教和户外科技品牌研究，我持续思考一个问题：新兴技术如何帮助人的故事变得更负责任、更包容、更容易被理解？</span><span class="lang-en">I am interested in how technology changes the way people see, learn, and connect across cultures. Through documentary fieldwork in Kekexili, teaching service in Sri Lanka, and brand research on outdoor technology, I study one question: how can emerging technologies help human stories become more ethical, inclusive, and understandable?</span></p>
+          <p class="subheadline"><span class="lang-zh">从 W8 的消费文化研究，到可可西里的纪录片、斯里兰卡的支教和 Toread 品牌研究，我关注技术如何改变人们看见、学习与连接的方式。</span><span class="lang-en">From W8's study of consumer culture to documentary fieldwork in Kekexili, teaching in Sri Lanka, and research at Toread, I explore how technology changes the way people see, learn, and connect.</span></p>
           <ul class="proof-list" aria-label="Quick highlights">
             <li><strong><span class="lang-zh">文化与媒体</span><span class="lang-en">Culture + Media</span></strong><span><span class="lang-zh">纪录片、视觉叙事和公共记忆</span><span class="lang-en">documentary, visual storytelling, and public memory</span></span></li>
             <li><strong><span class="lang-zh">包容教育</span><span class="lang-en">Inclusive Learning</span></strong><span><span class="lang-zh">跨语言、能力和文化的沟通</span><span class="lang-en">communication across language, ability, and culture</span></span></li>
             <li><strong><span class="lang-zh">技术理解</span><span class="lang-en">Technology Literacy</span></strong><span><span class="lang-zh">产品技术、用户信任和价值表达</span><span class="lang-en">product technology, user trust, and value communication</span></span></li>
           </ul>
-          <div class="hero-actions">
-            <a class="button primary" href="#work"><span class="lang-zh">查看项目</span><span class="lang-en">View selected work</span></a>
-            <a class="button" href="mailto:sophe0224@gmail.com"><span class="lang-zh">联系我</span><span class="lang-en">Contact me</span></a>
-            <a class="button" href="assets/bella-liu-cv.pdf" target="_blank" rel="noreferrer"><span class="lang-zh">查看简历</span><span class="lang-en">View CV</span></a>
-            <a class="button" href="https://www.linkedin.com/in/bella-liu-814421280/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="button" href="https://www.youtube.com/@B3llaS-w4z" target="_blank" rel="noreferrer">YouTube</a>
-          </div>
-        </div>
-        <div class="profile-frame">
-          <img src="assets/bella-home-portrait.jpg" alt="Bella Liu portrait in a green landscape">
         </div>
       </div>
     </section>
@@ -1200,6 +910,60 @@
         </div>
 
         <div class="work-grid">
+          <article class="work-card">
+            <div class="work-copy">
+              <div>
+                <p class="eyebrow"><span class="lang-zh">AI 文化分析工具 · Labubu 案例</span><span class="lang-en">AI culture analysis tool · Labubu case</span></p>
+                <h3><span class="lang-zh">W8：AI 冲动消费反思工具</span><span class="lang-en">W8: AI Impulse-Buying Reflection Tool</span></h3>
+                <p class="tension"><span class="lang-zh">面向 Gen Z 的消费欲望反思工具。</span><span class="lang-en">A Gen Z reflection tool for trend-driven desire.</span></p>
+                <p class="description"><span class="lang-zh">以 Labubu 为案例，把“我想买”快速拆解为身份、社群、稀缺感和情绪安慰。</span><span class="lang-en">Using Labubu as a case, the prototype turns “I want it” into a quick reflection on identity, community, scarcity, and emotional comfort.</span></p>
+                <div class="w8-ports">
+                  <a class="w8-port" href="https://w8-lab.com/#prototype" target="_blank" rel="noreferrer">
+                    <span>01 / CHATBOX</span>
+                    <strong><span class="lang-zh">进入互动 Chatbox ↗</span><span class="lang-en">Enter the Chatbox ↗</span></strong>
+                    <small><span class="lang-zh">体验从刷到、想要到反思的过程</span><span class="lang-en">Explore the path from seeing to wanting to reflecting</span></small>
+                  </a>
+                  <a class="w8-port" href="labubu-research-paper.html">
+                    <span>02 / RESEARCH</span>
+                    <strong><span class="lang-zh">阅读研究论文 ↗</span><span class="lang-en">Read the research ↗</span></strong>
+                    <small><span class="lang-zh">Labubu、新奢侈与 Gen Z 消费欲望</span><span class="lang-en">Labubu, new luxury, and Gen Z consumer desire</span></small>
+                  </a>
+                </div>
+                <div class="case-study-block">
+                  <p class="case-study-lede"><span class="lang-zh">快速项目摘要</span><span class="lang-en">Quick project brief</span></p>
+                  <div class="case-facts">
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">问题</span><span class="lang-en">Problem</span></strong>
+                      <span><span class="lang-zh">平台热度让“想买”变得紧急。</span><span class="lang-en">Platform hype makes desire feel urgent.</span></span>
+                    </div>
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">用户</span><span class="lang-en">Audience</span></strong>
+                      <span><span class="lang-zh">TikTok、小红书和 Instagram 上的 Gen Z 收藏者。</span><span class="lang-en">Gen Z collectors on TikTok, Xiaohongshu, and Instagram.</span></span>
+                    </div>
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">研究洞察</span><span class="lang-en">Research Insight</span></strong>
+                      <span><span class="lang-zh">欲望由情绪、身份、社群和稀缺感叠加。</span><span class="lang-en">Desire grows through emotion, identity, community, and scarcity.</span></span>
+                    </div>
+                    <div class="case-fact">
+                      <strong><span class="lang-zh">设计回应</span><span class="lang-en">Design Response</span></strong>
+                      <span><span class="lang-zh">双语 Chatbox 帮用户在购买前生成反思报告。</span><span class="lang-en">A bilingual chatbox turns impulse into a pre-purchase reflection report.</span></span>
+                    </div>
+                  </div>
+                  <p class="project-role"><strong><span class="lang-zh">我的职责：</span><span class="lang-en">My role:</span></strong> <span class="lang-zh">研究、双语内容、互动设计和原型开发。</span><span class="lang-en">research, bilingual content, interaction design, and prototyping.</span></p>
+                </div>
+                <p class="ethics-note"><span class="lang-zh">目标不是刺激消费，而是让用户先暂停、再选择。</span><span class="lang-en">The goal is not more consumption; it is a clearer pause before choosing.</span></p>
+              </div>
+              <div class="meta-tags">
+                <span class="tag"><span class="lang-zh">AI 反思</span><span class="lang-en">AI reflection</span></span>
+                <span class="tag"><span class="lang-zh">数字平台</span><span class="lang-en">Digital platforms</span></span>
+                <span class="tag"><span class="lang-zh">负责任技术</span><span class="lang-en">Responsible technology</span></span>
+              </div>
+            </div>
+            <a class="work-image labubu-preview" href="https://w8-lab.com/#prototype" target="_blank" rel="noreferrer" aria-label="Open W8 Chatbox prototype">
+              <img src="assets/labubu-chatbox-preview.png" alt="W8 Chatbox conversation interface">
+            </a>
+          </article>
+
           <article class="work-card">
             <div class="work-copy">
               <div>
@@ -1232,8 +996,8 @@
                 <span class="tag"><span class="lang-zh">生态保护</span><span class="lang-en">Environmental protection</span></span>
               </div>
             </div>
-            <div class="work-image">
-              <img src="assets/kekexili-1.jpg" alt="Kekexili documentary scenes and plateau landscapes">
+            <div class="work-image work-video">
+              <iframe src="https://www.youtube-nocookie.com/embed/_gDqZzGt54Q" title="Kekexili documentary by Bella Liu" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </article>
 
@@ -1263,9 +1027,9 @@
             <div class="work-copy">
               <div>
                 <p class="eyebrow"><span class="lang-zh">品牌研究 · 2026年1月</span><span class="lang-en">Brand research · January 2026</span></p>
-                <h3><span class="lang-zh">探路者品牌研究</span><span class="lang-en">Pathfinder Brand Research</span></h3>
+                <h3><span class="lang-zh">探路者（Toread）品牌研究</span><span class="lang-en">Toread Brand Research</span></h3>
                 <p class="tension"><span class="lang-zh">产品技术、用户信任和文化沟通。</span><span class="lang-en">Product technology, user trust, and cultural communication.</span></p>
-                <p class="description"><span class="lang-zh">在探路者调研中，我研究 GORE-TEX 材料和智能产品功能等技术优势如何被转化为消费者能理解的价值。我开始关注技术能力和用户实际感知之间的差距。</span><span class="lang-en">During my Pathfinder research, I studied how technical strengths such as GORE-TEX materials and smart product features are translated into consumer understanding. I became interested in the gap between what technology can do and how people actually perceive its value.</span></p>
+                <p class="description"><span class="lang-zh">在探路者（Toread）调研中，我研究 GORE-TEX 材料和智能产品功能等技术优势如何被转化为消费者能理解的价值。我开始关注技术能力和用户实际感知之间的差距。</span><span class="lang-en">During my Toread research, I studied how technical strengths such as GORE-TEX materials and smart product features are translated into consumer understanding. I became interested in the gap between what technology can do and how people actually perceive its value.</span></p>
               </div>
               <div class="meta-tags">
                 <span class="tag"><span class="lang-zh">市场调研</span><span class="lang-en">Market research</span></span>
@@ -1274,122 +1038,10 @@
               </div>
             </div>
             <div class="work-image">
-              <img src="assets/pathfinder-internship.jpg" alt="Pathfinder internship sales practice in a Toread retail store">
+              <img src="assets/pathfinder-internship.jpg" alt="Toread internship sales practice in a retail store">
             </div>
           </article>
 
-          <article class="work-card">
-            <div class="work-copy">
-              <div>
-                <p class="eyebrow"><span class="lang-zh">AI 文化分析工具 · 消费趋势</span><span class="lang-en">AI culture analysis tool · Consumer trends</span></p>
-                <h3><span class="lang-zh">反思报告原型</span><span class="lang-en">Reflection Report Prototype</span></h3>
-                <p class="tension"><span class="lang-zh">面向 Gen Z 的消费欲望反思工具。</span><span class="lang-en">A Gen Z reflection tool for trend-driven desire.</span></p>
-                <p class="description"><span class="lang-zh">以 Labubu 为案例，把“我想买”快速拆解为身份、社群、稀缺感和情绪安慰。</span><span class="lang-en">Using Labubu as a case, the prototype turns “I want it” into a quick reflection on identity, community, scarcity, and emotional comfort.</span></p>
-                <a class="paper-callout" href="labubu-research-paper.html">
-                  <strong><span class="lang-zh">研究论文</span><span class="lang-en">Research Paper</span></strong>
-                  <span><span class="lang-zh">阅读可视化论文：Labubu、新奢侈与 Gen Z 消费欲望。</span><span class="lang-en">Read the visual paper on Labubu, New Luxury, and Gen Z consumer desire.</span></span>
-                </a>
-                <div class="case-study-block">
-                  <p class="case-study-lede"><span class="lang-zh">快速项目摘要</span><span class="lang-en">Quick project brief</span></p>
-                  <div class="case-facts">
-                    <div class="case-fact">
-                      <strong><span class="lang-zh">问题</span><span class="lang-en">Problem</span></strong>
-                      <span><span class="lang-zh">平台热度让“想买”变得紧急。</span><span class="lang-en">Platform hype makes desire feel urgent.</span></span>
-                    </div>
-                    <div class="case-fact">
-                      <strong><span class="lang-zh">用户</span><span class="lang-en">Audience</span></strong>
-                      <span><span class="lang-zh">TikTok、小红书和 Instagram 上的 Gen Z 收藏者。</span><span class="lang-en">Gen Z collectors on TikTok, Xiaohongshu, and Instagram.</span></span>
-                    </div>
-                    <div class="case-fact">
-                      <strong><span class="lang-zh">研究洞察</span><span class="lang-en">Research Insight</span></strong>
-                      <span><span class="lang-zh">欲望由情绪、身份、社群和稀缺感叠加。</span><span class="lang-en">Desire grows through emotion, identity, community, and scarcity.</span></span>
-                    </div>
-                    <div class="case-fact">
-                      <strong><span class="lang-zh">设计回应</span><span class="lang-en">Design Response</span></strong>
-                      <span><span class="lang-zh">双语 Chatbox 帮用户在购买前生成反思报告。</span><span class="lang-en">A bilingual chatbox turns impulse into a pre-purchase reflection report.</span></span>
-                    </div>
-                  </div>
-                  <p class="project-role"><strong><span class="lang-zh">我的职责：</span><span class="lang-en">My role:</span></strong> <span class="lang-zh">研究、双语内容、互动设计和原型开发。</span><span class="lang-en">research, bilingual content, interaction design, and prototyping.</span></p>
-                  <div class="project-links">
-                    <a class="project-link" href="https://w8-lab.com/" target="_blank" rel="noreferrer"><span class="lang-zh">体验完整案例研究 ↗</span><span class="lang-en">Explore the full case study ↗</span></a>
-                    <a class="project-link" href="labubu-research-paper.html"><span class="lang-zh">阅读研究论文 ↗</span><span class="lang-en">Read the research paper ↗</span></a>
-                    <a class="project-link secondary" href="https://github.com/sophe0224-bot/chatbox-labubu" target="_blank" rel="noreferrer"><span class="lang-zh">查看项目代码 ↗</span><span class="lang-en">View project source ↗</span></a>
-                  </div>
-                </div>
-                <p class="ethics-note"><span class="lang-zh">目标不是刺激消费，而是让用户先暂停、再选择。</span><span class="lang-en">The goal is not more consumption; it is a clearer pause before choosing.</span></p>
-              </div>
-              <div class="meta-tags">
-                <span class="tag"><span class="lang-zh">AI 反思</span><span class="lang-en">AI reflection</span></span>
-                <span class="tag"><span class="lang-zh">数字平台</span><span class="lang-en">Digital platforms</span></span>
-                <span class="tag"><span class="lang-zh">负责任技术</span><span class="lang-en">Responsible technology</span></span>
-              </div>
-            </div>
-            <div class="work-image report-preview" aria-label="Reflection Report interface preview">
-              <div class="consumer-board">
-                <figure class="consumer-shot">
-                  <img src="assets/labubu-chatbox-preview.png" alt="Labubu Chatbox prototype interface with a consumer reflection prompt">
-                  <figcaption class="shot-label"><span class="lang-zh">Chatbox 原型界面</span><span class="lang-en">Chatbox prototype</span></figcaption>
-                </figure>
-                <div class="signal-panel" aria-label="Consumer desire signal map">
-                  <div>
-                    <p class="signal-kicker"><span class="lang-zh">趋势信号</span><span class="lang-en">Trend Signals</span></p>
-                    <p class="signal-title"><span class="lang-zh">从刷到、想要，到暂停反思</span><span class="lang-en">From seeing, to wanting, to pausing</span></p>
-                  </div>
-                  <div class="signal-list">
-                    <div class="signal-row">
-                      <span class="signal-icon">01</span>
-                      <span><span class="lang-zh">社交曝光</span><span class="lang-en">Social exposure</span></span>
-                      <span class="signal-value">82%</span>
-                    </div>
-                    <div class="signal-row">
-                      <span class="signal-icon">02</span>
-                      <span><span class="lang-zh">稀缺感</span><span class="lang-en">Scarcity cue</span></span>
-                      <span class="signal-value">71%</span>
-                    </div>
-                    <div class="signal-row">
-                      <span class="signal-icon">03</span>
-                      <span><span class="lang-zh">情绪价值</span><span class="lang-en">Emotional value</span></span>
-                      <span class="signal-value">68%</span>
-                    </div>
-                  </div>
-                  <div class="mini-graph" aria-hidden="true">
-                    <span style="height: 32%;"></span>
-                    <span style="height: 46%;"></span>
-                    <span style="height: 38%;"></span>
-                    <span style="height: 64%;"></span>
-                    <span style="height: 74%;"></span>
-                    <span style="height: 58%;"></span>
-                    <span style="height: 86%;"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="report-ui">
-                <div class="report-top">
-                  <span><span class="lang-zh">欲望反思助手</span><span class="lang-en">Desire Reflection Assistant</span></span>
-                  <span class="status-dot" aria-hidden="true"></span>
-                </div>
-                <div class="chat-bubble user"><span class="lang-zh">我为什么突然想买这个流行玩具？</span><span class="lang-en">Why do I suddenly want this trending toy?</span></div>
-                <div class="chat-bubble"><span class="lang-zh">先暂停一下。我们可以看看平台、社群和情绪如何影响这个选择。</span><span class="lang-en">Let's pause first. We can look at how platforms, community, and emotion shape this choice.</span></div>
-                <div class="reflection-form">
-                  <textarea class="reflection-input lang-zh" id="reflection-input-zh" rows="3">我在小红书上一直刷到 Labubu，大家都说很难买到，我也想拥有一个。</textarea>
-                  <textarea class="reflection-input lang-en" id="reflection-input-en" rows="3">I keep seeing Labubu online. Everyone says it is hard to get, and I feel like I want one too.</textarea>
-                  <button class="reflection-button" type="button" id="reflection-generate"><span class="lang-zh">生成反思报告</span><span class="lang-en">Generate reflection report</span></button>
-                </div>
-                <div class="report-card">
-                  <p class="report-title"><span class="lang-zh">反思报告</span><span class="lang-en">Reflection Report</span></p>
-                  <p class="report-lede"><span class="lang-zh">我的欲望可能来自：</span><span class="lang-en">My desire seems driven by:</span></p>
-                  <div class="report-chips" id="reflection-output" aria-label="Reflection report drivers">
-                    <span class="report-chip"><span class="lang-zh">情绪安慰</span><span class="lang-en">emotional comfort</span></span>
-                    <span class="report-chip"><span class="lang-zh">身份认同</span><span class="lang-en">identity</span></span>
-                    <span class="report-chip"><span class="lang-zh">社群归属</span><span class="lang-en">community</span></span>
-                    <span class="report-chip"><span class="lang-zh">稀缺性</span><span class="lang-en">scarcity</span></span>
-                    <span class="report-chip"><span class="lang-zh">博主影响</span><span class="lang-en">influencer effect</span></span>
-                    <span class="report-chip"><span class="lang-zh">审美偏好</span><span class="lang-en">aesthetic preference</span></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -1404,7 +1056,7 @@
           <div class="timeline-item">
             <div class="timeline-date">Jan 2026</div>
             <div>
-              <h3 class="timeline-title"><span class="lang-zh">探路者品牌实习与市场调查</span><span class="lang-en">Pathfinder Brand Internship and Market Research</span></h3>
+              <h3 class="timeline-title"><span class="lang-zh">探路者（Toread）品牌实习与市场调查</span><span class="lang-en">Toread Brand Internship and Market Research</span></h3>
               <p class="timeline-text"><span class="lang-zh">分析技术优势、品牌营销差距，并通过模拟顾客互相推销训练销售表达。</span><span class="lang-en">Analyzed technical strengths and brand marketing gaps, then practiced sales communication through customer role-play.</span></p>
             </div>
           </div>
@@ -1433,10 +1085,26 @@
       </div>
     </section>
 
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <h2><span class="lang-zh">联系我</span><span class="lang-en">Let's connect</span></h2>
+            <p><span class="lang-zh">欢迎联系我聊纪录片、公益项目、品牌研究、音乐、舞蹈或合作。</span><span class="lang-en">Reach out to talk about documentary work, service projects, brand research, music, dance, or collaboration.</span></p>
+            <div class="contact-actions" aria-label="Contact links">
+              <a class="contact-action" href="mailto:sophe0224@gmail.com">Email</a>
+              <a class="contact-action" href="assets/bella-liu-cv.pdf" target="_blank" rel="noreferrer">CV</a>
+              <a class="contact-action" href="https://www.linkedin.com/in/bella-liu-814421280/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="contact-action" href="https://www.youtube.com/@B3llaS-w4z" target="_blank" rel="noreferrer">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section" id="about">
       <div class="container about-grid">
         <div class="about-image">
-          <img src="assets/srilanka-3.jpg" alt="Students showing artwork in Sri Lanka classroom">
+          <img src="assets/bella-home-portrait.jpg" alt="Bella Liu in a green landscape">
           <div class="about-image-caption"><span class="lang-zh">在课堂、田野和舞台之间，我寻找让复杂经验被看见的方法。</span><span class="lang-en">Between classrooms, fieldwork, and performance, I look for ways to make complex experiences visible.</span></div>
         </div>
         <div class="about-copy">
@@ -1463,28 +1131,11 @@
                 <span><strong><span class="lang-zh">清楚表达</span><span class="lang-en">Clear Expression</span></strong><span><span class="lang-zh">把复杂内容讲得更可感。</span><span class="lang-en">Making complex ideas easier to feel.</span></span></span>
               </div>
             </div>
-            <div class="about-question"><span class="lang-zh">我一直在问：怎样让一个故事被真正理解？</span><span class="lang-en">My recurring question: how can a story be truly understood?</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div>
-            <h2><span class="lang-zh">联系我</span><span class="lang-en">Let's connect</span></h2>
-            <p><span class="lang-zh">欢迎联系我聊纪录片、公益项目、品牌研究、音乐、舞蹈或合作。</span><span class="lang-en">Reach out to talk about documentary work, service projects, brand research, music, dance, or collaboration.</span></p>
-            <div class="contact-actions" aria-label="Contact links">
-              <a class="contact-action" href="mailto:sophe0224@gmail.com">Email</a>
-              <a class="contact-action" href="assets/bella-liu-cv.pdf" target="_blank" rel="noreferrer">CV</a>
-              <a class="contact-action" href="https://www.linkedin.com/in/bella-liu-814421280/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a class="contact-action" href="https://www.youtube.com/@B3llaS-w4z" target="_blank" rel="noreferrer">YouTube</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -1527,83 +1178,6 @@
     languageButtons.forEach((button) => {
       button.addEventListener("click", () => setLanguage(button.dataset.langOption));
     });
-
-    const reflectionDrivers = [
-      {
-        key: "emotional",
-        zh: "情绪安慰",
-        en: "emotional comfort",
-        terms: ["comfort", "stress", "sad", "happy", "reward", "feel", "cute", "emotion", "情绪", "安慰", "治愈", "压力", "开心", "难过", "可爱"]
-      },
-      {
-        key: "identity",
-        zh: "身份认同",
-        en: "identity",
-        terms: ["identity", "style", "self", "personality", "aesthetic", "taste", "身份", "自我", "个性", "人设", "风格", "审美"]
-      },
-      {
-        key: "community",
-        zh: "社群归属",
-        en: "community",
-        terms: ["everyone", "friends", "group", "community", "trend", "popular", "大家", "朋友", "社群", "圈子", "流行", "潮流"]
-      },
-      {
-        key: "scarcity",
-        zh: "稀缺性",
-        en: "scarcity",
-        terms: ["rare", "limited", "hard to get", "sold out", "drop", "scarce", "难买", "限量", "缺货", "抢", "稀缺"]
-      },
-      {
-        key: "influencer",
-        zh: "博主影响",
-        en: "influencer effect",
-        terms: ["influencer", "creator", "tiktok", "youtube", "instagram", "online", "feed", "小红书", "抖音", "博主", "网红", "刷到", "平台"]
-      },
-      {
-        key: "aesthetic",
-        zh: "审美偏好",
-        en: "aesthetic preference",
-        terms: ["beautiful", "design", "color", "look", "toy", "labubu", "aesthetic", "好看", "设计", "颜色", "玩具", "拉布布", "审美"]
-      }
-    ];
-
-    const fallbackDriverKeys = ["emotional", "identity", "community"];
-    const reflectionOutput = document.querySelector("#reflection-output");
-    const reflectionButton = document.querySelector("#reflection-generate");
-
-    function renderReflectionReport(drivers) {
-      if (!reflectionOutput) return;
-      reflectionOutput.textContent = "";
-      drivers.forEach((driver) => {
-        const chip = document.createElement("span");
-        chip.className = "report-chip";
-        const zh = document.createElement("span");
-        zh.className = "lang-zh";
-        zh.textContent = driver.zh;
-        const en = document.createElement("span");
-        en.className = "lang-en";
-        en.textContent = driver.en;
-        chip.append(zh, en);
-        reflectionOutput.appendChild(chip);
-      });
-    }
-
-    function generateReflectionReport() {
-      const currentLanguage = document.body.dataset.lang === "zh" ? "zh" : "en";
-      const input = document.querySelector(`#reflection-input-${currentLanguage}`);
-      const text = (input?.value || "").toLowerCase();
-      const matchedDrivers = reflectionDrivers.filter((driver) =>
-        driver.terms.some((term) => text.includes(term.toLowerCase()))
-      );
-      const selectedKeys = new Set(matchedDrivers.map((driver) => driver.key));
-      fallbackDriverKeys.forEach((key) => {
-        if (selectedKeys.size < 3) selectedKeys.add(key);
-      });
-      const selectedDrivers = reflectionDrivers.filter((driver) => selectedKeys.has(driver.key));
-      renderReflectionReport(selectedDrivers);
-    }
-
-    reflectionButton?.addEventListener("click", generateReflectionReport);
 
     setLanguage(readSavedLanguage());
   </script>
